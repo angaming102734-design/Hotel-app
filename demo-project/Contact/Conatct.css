@@ -1,0 +1,151 @@
+/* ==========================
+   PREMIUM BOOKING FORM
+========================== */
+
+.booking-section{
+    padding: 80px 20px;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+}
+
+.booking-container{
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.booking-title{
+    text-align: center;
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.booking-subtitle{
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 35px;
+}
+
+#whatsappForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#whatsappForm input,
+#whatsappForm select,
+#whatsappForm textarea{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#whatsappForm input::placeholder,
+#whatsappForm textarea::placeholder{
+    color: #ccc;
+}
+
+#whatsappForm input:focus,
+#whatsappForm select:focus,
+#whatsappForm textarea:focus{
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212,175,55,0.3);
+}
+
+#whatsappForm textarea{
+    grid-column: span 2;
+    min-height: 120px;
+    resize: none;
+}
+
+.full-width{
+    grid-column: span 2;
+}
+
+#whatsappForm button{
+    grid-column: span 2;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #f5d76e
+    );
+    transition: 0.3s;
+}
+
+#whatsappForm button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(212,175,55,0.4);
+}
+
+#whatsappForm button:active{
+    transform: scale(0.98);
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 768px){
+
+    .booking-container{
+        padding: 25px;
+    }
+
+    .booking-title{
+        font-size: 2rem;
+    }
+
+    #whatsappForm{
+        grid-template-columns: 1fr;
+    }
+
+    .full-width,
+    #whatsappForm textarea,
+    #whatsappForm button{
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px){
+
+    .booking-section{
+        padding: 60px 15px;
+    }
+
+    .booking-title{
+        font-size: 1.7rem;
+    }
+
+    #whatsappForm input,
+    #whatsappForm select,
+    #whatsappForm textarea{
+        padding: 13px;
+        font-size: 15px;
+    }
+
+    #whatsappForm button{
+        font-size: 16px;
+    }
+}

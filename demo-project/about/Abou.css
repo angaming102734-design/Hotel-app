@@ -1,0 +1,142 @@
+.about-section{
+    padding:100px 20px;
+    background:linear-gradient(135deg,#0f172a,#111827);
+    color:white;
+}
+
+.about-container{
+    display:flex;
+    gap:50px;
+    max-width:1200px;
+    margin:auto;
+    align-items:center;
+}
+
+/* IMAGE */
+.about-image{
+    flex:1;
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    transition:0.4s;
+}
+
+.about-image img:hover{
+    transform:scale(1.05);
+}
+
+/* EXPERIENCE BADGE */
+.experience-badge{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    background:rgba(212,175,55,0.95);
+    color:black;
+    padding:15px 20px;
+    border-radius:15px;
+    text-align:center;
+    animation:float 3s infinite ease-in-out;
+}
+
+.experience-badge h3{
+    font-size:20px;
+    margin:0;
+}
+
+.experience-badge p{
+    margin:0;
+    font-size:14px;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+}
+
+/* CONTENT */
+.about-content{
+    flex:1;
+}
+
+.sub-title{
+    color:#d4af37;
+    letter-spacing:2px;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.about-content h2{
+    font-size:44px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* FEATURES */
+.about-features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin:25px 0;
+}
+
+.feature-box{
+    background:rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.feature-box:hover{
+    background:rgba(212,175,55,0.15);
+    transform:translateY(-5px);
+    border-color:#d4af37;
+}
+
+/* BUTTON */
+.about-btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:linear-gradient(135deg,#d4af37,#f5d76e);
+    color:black;
+    font-weight:600;
+    border-radius:50px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.about-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-features{
+        grid-template-columns:1fr;
+    }
+
+    .about-content h2{
+        font-size:32px;
+    }
+
+    .experience-badge{
+        left:50%;
+        transform:translateX(-50%);
+    }
+}

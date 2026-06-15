@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking</title>
+    <link rel="stylesheet" href="room.css">
+</head>
+<body>
+
+
+    <!-- Book Now Button -->
+<button id="openModal" class="book-btn">
+    Book Your Room
+</button>
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn">&times;</span>
+
+        <h2>Luxury Room Booking</h2>
+
+        <form id="bookingForm">
+
+            <input
+                type="text"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Phone Number"
+                required
+            >
+
+            <input
+                type="date"
+                required
+            >
+
+            <input
+                type="date"
+                required
+            >
+
+            <select>
+                <option>Standard Room</option>
+                <option>Deluxe Room</option>
+                <option>Executive Suite</option>
+                <option>Family Suite</option>
+            </select>
+
+            <button type="submit">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+    
+<script src="Room.js"></script>
+</body>
+</html>
